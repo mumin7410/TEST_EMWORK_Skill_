@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+body { font-family: Verdana, sans-serif; margin: 0; }
+
+.templeall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wat_container {
+  display: flex;
+  overflow-x: auto;  /* Enables horizontal scrolling */
+  padding: 10px;
+  width: 1200px;
+  scroll-snap-type: x mandatory;  /* Ensures smooth snapping to each item */
+}
+.wat_container::-webkit-scrollbar {
+  display: none;  /* Hide the scrollbar */
+}
+
+.wat {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  border-radius: 12px;
+  flex-shrink: 0;  /* Prevents items from shrinking */
+  scroll-snap-align: center;  /* Ensures each item snaps to center */
+}
+
+.wat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Crop the image to fill the container while maintaining the aspect ratio */
+  border-radius: 12px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_title {
+  position: absolute;  /* Position text absolutely within the container */
+  top: 50%;            /* Vertically center the text */
+  left: 50%;           /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Adjust the position to truly center the text */
+  font-size: 20px;
+  color: aliceblue;
+  text-align: center;
+}
